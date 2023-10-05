@@ -6,17 +6,17 @@ export default function NavBar() {
       <ul className="flex gap-2">
         <li>
           <Link href="/"
-            className="text-orange-800 hover:underline">
-            Home
+            className="font-bold font-orbitron text-orange-800 hover:underline">
+           Indie gamer
           </Link>
         </li>
-        <li>
+        <li className='ml-auto'>
           <Link href="/reviews"
             className="text-orange-800 hover:underline">
             Reviews
           </Link>
         </li>
-        <li>
+        <li className='mr-8'>
           <Link href="/about" prefetch={false}
             className="text-orange-800 hover:underline">
             About
