@@ -6,6 +6,14 @@ export async function generateStaticParams() {
   return slugs.map((slug) => ({ slug: slug }));
 }
 
+// dynamic metadata by its params 
+export async function generateMetadata(props){
+  const review = await getReview(props.params.slug);
+  return {
+    title : review.title
+  }
+}
+
 export default async function ReviewPage(props) {
   const review = await getReview(props.params.slug);
 
